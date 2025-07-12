@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
-import mongoosefrom  from "mongoose";
 
+import dotenv from "dotenv";
+dotenv.config();
+
+console.log("Loaded URI =", process.env.MONGODB_URI);
 let cached = global.mongoose
 
 if(!cached){
@@ -29,3 +32,4 @@ async function connectDB() {
 }
 
 export default connectDB
+console.log("MongoDB URI:", process.env.MONGODB_URI);
