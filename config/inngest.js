@@ -61,10 +61,3 @@ export const syncUserDeletion = inngest.createFunction(
     await User.findByIdAndDelete(id);
   }
 );
-
-// ✅ Export all functions
-export {
-  syncUserCreation,
-  syncUserUpdation,
-  syncUserDeletion
-};
